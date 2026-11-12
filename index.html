@@ -4,19 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Sessão Zero · Marketing para psicólogas</title>
-<meta name="description" content="Materiais e sistemas para organizar a conversa que acontece antes da primeira sessão.">
+<meta name="description" content="Materiais, sistemas e conteúdo para psicólogas organizarem a conversa que acontece antes da primeira sessão, dentro do Código de Ética.">
 <meta name="theme-color" content="#0C2620">
+<link rel="canonical" href="https://sessaozeropsi.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sessão Zero">
-<meta property="og:description" content="Marketing para psicólogas. Comece pelo Método 7 Dias de Acolhimento.">
+<meta property="og:site_name" content="Sessão Zero">
+<meta property="og:title" content="Sessão Zero · Marketing para psicólogas">
+<meta property="og:description" content="A agenda enche na conversa que acontece antes da primeira sessão. Comece pelo Método 7 Dias de Acolhimento.">
+<meta property="og:url" content="https://sessaozeropsi.com/">
 <meta property="og:locale" content="pt_BR">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E6B57'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='600' fill='%23E8D4A4' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://sessaozeropsi.com/#org","name":"Sessão Zero","url":"https://sessaozeropsi.com/","sameAs":["https://www.instagram.com/sessaozero.psi/"]},
+    {"@type":"WebSite","@id":"https://sessaozeropsi.com/#site","url":"https://sessaozeropsi.com/","name":"Sessão Zero","inLanguage":"pt-BR","publisher":{"@id":"https://sessaozeropsi.com/#org"}}
+  ]
+}
+</script>
 <style>
-/* Layout: uma tela de celular. Card de destaque, uma linha de produtos e
-   uma linha de perfis. Nada de rolagem longa. */
 :root{
   --verde-fundo:#0C2620;
   --verde-topo:#15705C;
@@ -32,167 +42,175 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   background:
-    radial-gradient(120% 85% at 50% -10%, var(--verde-topo) 0%, #0F3B31 42%, var(--verde-fundo) 100%)
+    radial-gradient(120% 70% at 50% -10%, var(--verde-topo) 0%, #0F3B31 42%, var(--verde-fundo) 100%)
     var(--verde-fundo);
-  background-attachment:fixed;
   color:var(--creme);
   font-family:var(--sans);
   -webkit-font-smoothing:antialiased;
+  line-height:1.5;
 }
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--dourado);outline-offset:3px}
 .wrap{
-  max-width:30rem;margin:0 auto;
+  max-width:64rem;margin:0 auto;
   padding-left:max(16px, env(safe-area-inset-left, 0px));
   padding-right:max(16px, env(safe-area-inset-right, 0px));
-  padding-block:1.75rem 1.5rem;
-  display:flex;flex-direction:column;gap:1.25rem;
 }
 
-/* cabeçalho */
-.head{display:flex;align-items:center;gap:.9rem}
+/* topo */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0}
+.marca{display:flex;align-items:center;gap:.7rem;text-decoration:none}
 .mark{
-  flex:none;width:52px;height:52px;border-radius:50%;
-  display:grid;place-items:center;
-  font-family:var(--serif);font-size:1.6rem;font-weight:600;
-  color:var(--dourado);background:rgba(232,212,164,.10);
-  border:1px solid var(--verde-linha);
+  flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--dourado);
+  background:rgba(232,212,164,.10);border:1px solid var(--verde-linha);
 }
-.head .texto{min-width:0}
-.papel{font-size:.66rem;font-weight:700;letter-spacing:.2em;color:var(--dourado);margin:0 0 .2rem;text-transform:uppercase}
-.nome{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1.2;margin:0}
-.linha{font-size:.9rem;line-height:1.5;color:var(--creme-suave);margin:0}
+.marca b{font-family:var(--serif);font-weight:600;font-size:1.05rem;white-space:nowrap}
+.menu{display:flex;gap:1.1rem;margin:0;padding:0;list-style:none}
+.menu a{text-decoration:none;font-size:.88rem;color:var(--creme-suave)}
+.menu a:hover{color:var(--dourado)}
 
-/* destaque */
-.destaque{
+/* hero */
+.hero{padding:3rem 0 2.5rem;max-width:40rem}
+.kicker{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado);margin:0 0 .9rem}
+h1{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,2.8rem);line-height:1.15;font-weight:600;margin:0 0 1rem}
+.hero p{font-size:1.02rem;color:var(--creme-suave);margin:0 0 1.5rem;max-width:36rem}
+.acoes{display:flex;flex-wrap:wrap;gap:.7rem}
+.botao{
+  display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;
+  background:var(--dourado);color:#14322B;font-weight:700;font-size:.95rem;
+  padding:.8rem 1.2rem;border-radius:999px;transition:transform .18s ease;
+}
+.botao:hover{transform:translateY(-2px)}
+.botao.leve{background:transparent;color:var(--creme);border:1px solid var(--verde-linha)}
+.botao.leve:hover{border-color:var(--dourado)}
+
+/* seções */
+section{padding:2.25rem 0}
+.titulo{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin:0 0 .4rem}
+.sub{color:var(--creme-suave);margin:0 0 1.4rem;max-width:40rem}
+.grade{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{
   display:block;text-decoration:none;color:inherit;
-  background:var(--verde-card);border:1px solid var(--verde-linha);
-  border-radius:20px;padding:1.1rem 1.15rem 1.15rem;
+  background:var(--verde-card);border:1px solid var(--verde-linha);border-radius:18px;padding:1.15rem;
   transition:border-color .18s ease, transform .18s ease;
 }
-.destaque:hover,.destaque:focus-visible{border-color:var(--dourado);transform:translateY(-2px)}
-.tag{
-  display:inline-block;font-size:.63rem;font-weight:700;letter-spacing:.16em;
-  text-transform:uppercase;color:#14322B;background:var(--dourado);
-  padding:.28rem .6rem;border-radius:999px;margin-bottom:.7rem;
+a.card:hover,a.card:focus-visible{border-color:var(--dourado);transform:translateY(-2px)}
+.card .tag{
+  display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:#14322B;background:var(--dourado);padding:.26rem .6rem;border-radius:999px;margin-bottom:.7rem;
 }
-.destaque h2{font-family:var(--serif);font-size:1.25rem;line-height:1.25;font-weight:600;margin:0 0 .4rem}
-.destaque p{font-size:.88rem;line-height:1.5;color:var(--creme-suave);margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:.35rem;margin:.8rem 0 .9rem;font-size:.72rem;color:var(--creme-suave)}
-.meta span{border:1px solid var(--verde-linha);border-radius:999px;padding:.28rem .6rem}
-.meta b{color:var(--dourado);font-weight:700}
-.botao{
-  display:flex;align-items:center;justify-content:center;gap:.4rem;
-  background:var(--dourado);color:#14322B;
-  font-size:.95rem;font-weight:700;padding:.8rem 1rem;border-radius:999px;
-}
-.garantia{font-size:.72rem;color:var(--creme-fraco);text-align:center;margin:.6rem 0 0}
+.card .tag.fraca{background:transparent;color:var(--dourado-escuro);border:1px solid var(--verde-linha)}
+.card h3{font-family:var(--serif);font-size:1.15rem;font-weight:600;margin:0 0 .4rem}
+.card p{font-size:.9rem;color:var(--creme-suave);margin:0}
+.card .preco{display:block;margin-top:.8rem;font-size:.78rem;color:var(--creme-fraco)}
 
-/* linhas de itens */
-.grupo{display:flex;flex-direction:column;gap:.5rem}
-.rotulo{font-size:.63rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--creme-fraco);margin:0 0 .1rem .1rem}
-.item{
-  display:flex;align-items:center;gap:.8rem;
-  text-decoration:none;color:inherit;
-  border:1px solid var(--verde-linha);border-radius:14px;padding:.7rem .85rem;
-  transition:border-color .18s ease, background .18s ease;
-}
-.item:hover,.item:focus-visible{border-color:var(--dourado);background:rgba(232,212,164,.06)}
-.item.inerte{cursor:default}
-.item.inerte:hover{border-color:var(--verde-linha);background:none}
-.icone{
-  flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
-  background:rgba(232,212,164,.10);color:var(--dourado);
-  font-family:var(--serif);font-size:.95rem;font-weight:600;
-}
-.texto{min-width:0;display:flex;flex-direction:column}
-.texto strong{font-size:.92rem;font-weight:600;line-height:1.3}
-.texto small{font-size:.76rem;line-height:1.4;color:var(--creme-suave)}
-.pin{
-  flex:none;margin-left:auto;font-size:.6rem;font-weight:700;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--dourado-escuro);
-  border:1px solid var(--verde-linha);border-radius:999px;padding:.25rem .5rem;
-}
-.dupla{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
-.dupla .item{gap:.6rem;padding:.65rem .7rem}
-.dupla .texto small{font-size:.7rem}
+.pilares{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.pilar{border-top:1px solid var(--verde-linha);padding-top:1rem}
+.pilar h3{font-family:var(--serif);font-size:1.05rem;font-weight:600;margin:0 0 .35rem}
+.pilar p{font-size:.9rem;color:var(--creme-suave);margin:0}
 
-/* rodapé */
-footer{border-top:1px solid var(--verde-linha);padding-top:.9rem;text-align:center}
-footer p{margin:0 0 .3rem;font-size:.72rem;line-height:1.5;color:var(--creme-fraco)}
+.blog{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.blog li{display:flex;align-items:center;justify-content:space-between;gap:1rem;border:1px solid var(--verde-linha);border-radius:14px;padding:.8rem .95rem;font-size:.92rem}
+.blog .pin{flex:none;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dourado-escuro);border:1px solid var(--verde-linha);border-radius:999px;padding:.25rem .5rem}
+
+footer{border-top:1px solid var(--verde-linha);padding:1.4rem 0 2rem;text-align:center}
+footer p{margin:0 0 .35rem;font-size:.74rem;color:var(--creme-fraco)}
 footer p:last-child{margin:0}
 footer a{color:var(--creme-suave);text-decoration:none;border-bottom:1px solid var(--verde-linha)}
 footer a:hover{color:var(--dourado)}
-a:focus-visible{outline:2px solid var(--dourado);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-@media (max-width:360px){
-  .dupla{grid-template-columns:1fr}
-  .nome{font-size:1.2rem}
-}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:480px){.menu a:not(:last-child){display:none}}
 </style>
 </head>
 <body>
 
 <div class="wrap">
 
-  <header class="head">
-    <div class="mark" aria-hidden="true">0</div>
-    <div class="texto">
-      <p class="papel">Sessão Zero</p>
-      <h1 class="nome">Marketing para psicólogas</h1>
+  <nav class="nav" aria-label="Principal">
+    <a class="marca" href="/"><span class="mark" aria-hidden="true">0</span><b>Sessão Zero</b></a>
+    <ul class="menu">
+      <li><a href="#comecar">Começar</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="/bio" class="js-cta" data-cta="home-nav-bio">Links</a></li>
+      <li><a href="https://www.instagram.com/sessaozero.psi/" class="js-cta" data-cta="home-nav-instagram" rel="noopener">Instagram</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">Marketing para psicólogas</p>
+    <h1>A agenda enche na conversa que acontece antes da primeira sessão.</h1>
+    <p>O Sessão Zero reúne materiais, sistemas e conteúdo para psicólogas que recebem contatos no WhatsApp e querem transformar o primeiro oi em consulta, sem vender a alma e dentro das regras do Conselho Federal de Psicologia.</p>
+    <div class="acoes">
+      <a class="botao js-cta" data-cta="home-hero-metodo" href="https://metodo.sessaozeropsi.com/?utm_source=site&amp;utm_medium=home&amp;utm_campaign=metodo-7-dias">Conhecer o Método 7 Dias <span aria-hidden="true">→</span></a>
+      <a class="botao leve js-cta" data-cta="home-hero-bio" href="/bio">Todos os links</a>
     </div>
   </header>
 
-  <p class="linha">Materiais e sistemas para organizar a conversa que acontece antes da primeira sessão.</p>
-
-  <a class="destaque js-cta" data-cta="bio-destaque" href="https://metodo-7-dias-acolhimento.vercel.app/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=sessao-zero">
-    <span class="tag">Comece por aqui</span>
-    <h2>Método 7 Dias de Acolhimento</h2>
-    <p>A cadência de 8 mensagens para atender quem chega no WhatsApp, com os textos prontos, a ficha de triagem e a planilha de funil.</p>
-    <div class="meta">
-      <span><b>7</b> materiais</span>
-      <span><b>8</b> mensagens</span>
-      <span><b>1h</b> para aplicar</span>
-    </div>
-    <div class="botao">Quero o método <span aria-hidden="true">→</span></div>
-    <p class="garantia">R$ 67,00 à vista · acesso imediato · 30 dias de garantia</p>
-  </a>
-
-  <div class="grupo">
-    <div class="item inerte">
-      <div class="icone" aria-hidden="true">S</div>
-      <div class="texto">
-        <strong>Serenity</strong>
-        <small>Agenda, pacientes, notas com IA e financeiro.</small>
+  <section id="comecar">
+    <h2 class="titulo">Por onde começar</h2>
+    <p class="sub">Três portas de entrada. Cada uma resolve um pedaço da rotina de quem atende.</p>
+    <div class="grade">
+      <a class="card js-cta" data-cta="home-card-metodo" href="https://metodo.sessaozeropsi.com/?utm_source=site&amp;utm_medium=home&amp;utm_campaign=metodo-7-dias">
+        <span class="tag">Comece por aqui</span>
+        <h3>Método 7 Dias de Acolhimento</h3>
+        <p>A cadência de 8 mensagens para atender quem chega no WhatsApp, com os textos prontos, a ficha de triagem e a planilha de funil.</p>
+        <span class="preco">R$ 67,00 à vista · acesso imediato · 30 dias de garantia</span>
+      </a>
+      <div class="card">
+        <span class="tag fraca">Em breve</span>
+        <h3>Serenity</h3>
+        <p>Agenda, pacientes, notas com IA e financeiro em um sistema feito para o consultório.</p>
       </div>
-      <span class="pin">Em breve</span>
+      <a class="card js-cta" data-cta="home-card-instagram" href="https://www.instagram.com/sessaozero.psi/" rel="noopener">
+        <span class="tag fraca">Conteúdo diário</span>
+        <h3>@sessaozero.psi</h3>
+        <p>Posts sobre a conversa antes da sessão, divulgação ética e o que o CFP permite na prática.</p>
+      </a>
     </div>
-  </div>
+  </section>
 
-  <div class="grupo">
-    <p class="rotulo">Onde eu publico</p>
-    <div class="dupla">
-      <a class="item js-cta" data-cta="bio-instagram" href="https://www.instagram.com/sessaozero.psi/">
-        <div class="icone" aria-hidden="true">IG</div>
-        <div class="texto"><strong>Instagram</strong><small>@sessaozero.psi</small></div>
-      </a>
-      <a class="item js-cta" data-cta="bio-facebook" href="https://www.facebook.com/7diasdeacolhimento">
-        <div class="icone" aria-hidden="true">FB</div>
-        <div class="texto"><strong>Facebook</strong><small>Método 7 Dias</small></div>
-      </a>
+  <section id="sobre">
+    <h2 class="titulo">O que você encontra aqui</h2>
+    <div class="pilares">
+      <div class="pilar">
+        <h3>A conversa antes da sessão</h3>
+        <p>Como responder o primeiro contato, conduzir a triagem e apresentar o valor depois do plano, no tempo da pessoa.</p>
+      </div>
+      <div class="pilar">
+        <h3>Divulgação dentro da ética</h3>
+        <p>O que pode e o que não pode na hora de falar do seu trabalho, com exemplos práticos e sem promessa de resultado.</p>
+      </div>
+      <div class="pilar">
+        <h3>Sistemas para a rotina</h3>
+        <p>Ferramentas que organizam agenda, pacientes e finanças para a clínica crescer sem perder o cuidado.</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="blog">
+    <h2 class="titulo">Blog</h2>
+    <p class="sub">Os artigos começam a sair em breve. Estes são os primeiros temas em produção.</p>
+    <ul class="blog">
+      <li>Como responder quando a pessoa pergunta quanto custa a sessão <span class="pin">Em breve</span></li>
+      <li>O que o Código de Ética permite na divulgação do trabalho da psicóloga <span class="pin">Em breve</span></li>
+      <li>Por que a janela de decisão de um paciente dura cerca de uma semana <span class="pin">Em breve</span></li>
+    </ul>
+  </section>
 
   <footer>
     <p>Material de apoio profissional. Não substitui formação clínica, supervisão ou as normas do Conselho Federal de Psicologia.</p>
-    <p>Freedom Pulse · Pagamentos pela <a href="https://lastlink.com/" rel="noopener">Lastlink</a></p>
+    <p><a href="/bio">Links</a> · <a href="https://metodo.sessaozeropsi.com/?utm_source=site&amp;utm_medium=footer&amp;utm_campaign=metodo-7-dias">Método 7 Dias</a> · Freedom Pulse · Pagamentos pela <a href="https://lastlink.com/" rel="noopener">Lastlink</a></p>
   </footer>
 
 </div>
 
 <script>
-/* Mesmo contêiner do GTM da LP, para medir clique na bio e atribuir a origem. */
+/* Mesmo contêiner do GTM da bio e da LP, para atribuir origem e medir cliques. */
 (function(){
   var id = 'GTM-TKW5TWQT';
   var dl = window.dataLayer = window.dataLayer || [];
@@ -201,10 +219,10 @@ a:focus-visible{outline:2px solid var(--dourado);outline-offset:3px}
   var j = document.createElement('script');
   j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
   f.parentNode.insertBefore(j, f);
-  dl.push({event:'ver_pagina_bio', pagina:'sessao-zero-bio'});
+  dl.push({event:'ver_pagina_home', pagina:'sessao-zero-home'});
   document.querySelectorAll('.js-cta').forEach(function(el){
     el.addEventListener('click', function(){
-      dl.push({event:'clique_bio', destino: el.getAttribute('data-cta') || 'bio'});
+      dl.push({event:'clique_home', destino: el.getAttribute('data-cta') || 'home'});
     });
   });
 })();
